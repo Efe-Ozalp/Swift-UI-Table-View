@@ -7,7 +7,7 @@ struct ContentView: View {
             Image("car")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Hello, everyone!")
         }
     }
 }
