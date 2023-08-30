@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct TableView: View {
+    var foodToEat: [food]
     var body: some View {
-       ListRow()
+        List(foodToEat) {
+            food in ListRow(eachFood: food)
+        }
     }
 }
 
 struct ListRow: View {
+    var eachFood: food
     var body: some View {
         HStack{
-            Text("Food")
+            Text(eachFood.name)
             Spacer()
             Image("burger")
                 .resizable()
@@ -26,20 +30,20 @@ struct ListRow: View {
     }
 }
 
-struct Food: Identifiable {
+struct food: Identifiable {
     var id: Int
     var name: String
 }
 
 var myFoods = [
-    Food(id: 1, name: "Hamburger"),
-    Food(id: 2, name: "Pizza"),
-    Food(id: 3, name: "Ramen"),
-    Food(id: 4, name: "Sandwich"),
-    Food(id: 5, name: "Taco")
+    food(id: 1, name: "Hamburger"),
+    food(id: 2, name: "Pizza"),
+    food(id: 3, name: "Ramen"),
+    food(id: 4, name: "Sandwich"),
+    food(id: 5, name: "Taco")
 ]
 struct TableView_Previews: PreviewProvider {
     static var previews: some View {
-        TableView()
+        TableView(foodToEat: myFoods)
     }
 }
