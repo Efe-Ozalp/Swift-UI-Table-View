@@ -2,11 +2,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-
+        NavigationView {
             TableView(foodToEat: myFoods)
-            
-            
+                .navigationBarTitle("A List of Foods")
+                
         }
     }
 }

@@ -22,7 +22,7 @@ struct ListRow: View {
         HStack{
             Text(eachFood.name)
             Spacer()
-            Image("burger")
+            Image(eachFood.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 40)
@@ -33,14 +33,15 @@ struct ListRow: View {
 struct food: Identifiable {
     var id: Int
     var name: String
+    var imageName: String
 }
 
 var myFoods = [
-    food(id: 1, name: "Hamburger"),
-    food(id: 2, name: "Pizza"),
-    food(id: 3, name: "Ramen"),
-    food(id: 4, name: "Sandwich"),
-    food(id: 5, name: "Taco")
+    food(id: 1, name: "Hamburger", imageName: "burger"),
+    food(id: 2, name: "Pizza", imageName: "pizza"),
+    food(id: 3, name: "Ramen", imageName: "ramen"),
+    food(id: 4, name: "Sandwich", imageName: "sandwich"),
+    food(id: 5, name: "Taco", imageName: "taco")
 ]
 struct TableView_Previews: PreviewProvider {
     static var previews: some View {
