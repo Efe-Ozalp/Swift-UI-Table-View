@@ -41,7 +41,8 @@ var myFoods = [
     food(id: 2, name: "Pizza", imageName: "pizza"),
     food(id: 3, name: "Ramen", imageName: "ramen"),
     food(id: 4, name: "Sandwich", imageName: "sandwich"),
-    food(id: 5, name: "Taco", imageName: "taco")
+    food(id: 5, name: "Taco", imageName: "taco"),
+    food(id: 6, name: "Fries", imageName: "fry")
 ]
 struct TableView_Previews: PreviewProvider {
     static var previews: some View {
