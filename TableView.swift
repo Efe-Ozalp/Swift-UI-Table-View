@@ -25,7 +25,7 @@ struct ListRow: View {
             Image(eachFood.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: 40)
+                .frame(width: 40, height: 40)
         }
     }
 }
@@ -42,7 +42,8 @@ var myFoods = [
     food(id: 3, name: "Ramen", imageName: "ramen"),
     food(id: 4, name: "Sandwich", imageName: "sandwich"),
     food(id: 5, name: "Taco", imageName: "taco"),
-    food(id: 6, name: "Fries", imageName: "fry")
+    food(id: 6, name: "Fries", imageName: "fry"),
+    food(id:7, name: "Wings", imageName: "wing")
 ]
 struct TableView_Previews: PreviewProvider {
     static var previews: some View {
